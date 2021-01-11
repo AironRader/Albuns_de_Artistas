@@ -1,6 +1,6 @@
-angular.module("AlbumArtistas", []);
-angular.module("AlbumArtistas").controller("ArtistaControle", function ($scope) {
-            $scope.app = "AlbumArtistas";
+angular.module("AlbumAritsta", []);
+angular.module("AlbumAritsta").controller("ArtistaControle", function ($scope) {
+            $scope.app = "AlbumAritsta";
             $scope.artistas = [];
             $scope.albuns = [];
             $scope.musicas = [];
@@ -11,7 +11,13 @@ $scope.select = function(selected) {
     $scope.selected = selected;
 }
 
-//Verifica se existe uma determinada playlist com determinado nome, e se existir retorna seus dados
+
+//////
+
+
+/*Verifica se existe uma lista de album e 
+  adicinar mais um novo artista*/
+
 
 
 function Album(nomeAlbum, autorAlbum) {
@@ -31,9 +37,8 @@ function Album(nomeAlbum, autorAlbum) {
   }
 }
 
-
-
-//Verifica se existe um determinado album com determinado nome, se existir, retorna seus dados
+/*Verifica se existe um determinado album 
+  caso exista o album ele o retorna*/
 retornaAlbum = function (nomeAlbum, autor) {
     for (i = 0; i < $scope.albuns.length; i++) {
       if ($scope.albuns[i].nomeAlbum == nomeAlbum) {
@@ -104,4 +109,4 @@ $scope.atualizaDadosArtista = function (selectedItem) {
     }
 }
 
-  });
+       });
